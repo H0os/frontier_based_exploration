@@ -1,0 +1,26 @@
+[0.811s] Invoking command in '/home/aymon/frontier_exploration_ws/frontier_exploration': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/aymon/frontier_exploration_ws/build/frontier_exploration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/frontier_exploration build --build-base /home/aymon/frontier_exploration_ws/build/frontier_exploration/build install --record /home/aymon/frontier_exploration_ws/build/frontier_exploration/install.log --single-version-externally-managed install_data
+[1.080s] running egg_info
+[1.101s] writing ../build/frontier_exploration/frontier_exploration.egg-info/PKG-INFO
+[1.101s] writing dependency_links to ../build/frontier_exploration/frontier_exploration.egg-info/dependency_links.txt
+[1.101s] writing entry points to ../build/frontier_exploration/frontier_exploration.egg-info/entry_points.txt
+[1.102s] writing requirements to ../build/frontier_exploration/frontier_exploration.egg-info/requires.txt
+[1.102s] writing top-level names to ../build/frontier_exploration/frontier_exploration.egg-info/top_level.txt
+[1.147s] reading manifest file '../build/frontier_exploration/frontier_exploration.egg-info/SOURCES.txt'
+[1.148s] writing manifest file '../build/frontier_exploration/frontier_exploration.egg-info/SOURCES.txt'
+[1.148s] running build
+[1.148s] running build_py
+[1.148s] running install
+[1.154s] running install_lib
+[1.177s] byte-compiling /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration/tree_node.py to tree_node.cpython-312.pyc
+[1.180s] running install_data
+[1.180s] running install_egg_info
+[1.204s] removing '/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration-0.0.0-py3.12.egg-info' (and everything under it)
+[1.204s] Copying ../build/frontier_exploration/frontier_exploration.egg-info to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration-0.0.0-py3.12.egg-info
+[1.205s] running install_scripts
+[1.349s] Installing exploration script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration
+[1.349s] Installing map_utils script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration
+[1.349s] Installing metric_subscriber script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration
+[1.349s] Installing training_data_collector script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration
+[1.349s] Installing tree_node script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration
+[1.349s] writing list of installed files to '/home/aymon/frontier_exploration_ws/build/frontier_exploration/install.log'
+[1.384s] Invoked command in '/home/aymon/frontier_exploration_ws/frontier_exploration' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/aymon/frontier_exploration_ws/build/frontier_exploration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/frontier_exploration build --build-base /home/aymon/frontier_exploration_ws/build/frontier_exploration/build install --record /home/aymon/frontier_exploration_ws/build/frontier_exploration/install.log --single-version-externally-managed install_data

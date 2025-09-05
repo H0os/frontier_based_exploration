@@ -1,0 +1,15 @@
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/ament_index/resource_index/package_run_dependencies/frontier_exploration
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/ament_index/resource_index/parent_prefix_path/frontier_exploration
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/environment/ament_prefix_path.sh
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/environment/ament_prefix_path.dsv
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/environment/path.sh
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/environment/path.dsv
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/local_setup.bash
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/local_setup.sh
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/local_setup.zsh
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/local_setup.dsv
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/package.dsv
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/ament_index/resource_index/packages/frontier_exploration
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/cmake/frontier_explorationConfig.cmake
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/cmake/frontier_explorationConfig-version.cmake
+/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/package.xml

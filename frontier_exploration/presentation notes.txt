@@ -1,0 +1,11 @@
+10 min presentation
+in presentation talk about anything new /solved in project
+have a background related information 
+point out the drawbacks of previous algorithms
+then talk about my solution 
+talk about image detector, and how i implemented and why i used it 
+talk about performance and results, use graphs, talk about how they are deterministic.
+conclusion should include all contribution
+mention that its new
+mention that my project is possibly publishable
+

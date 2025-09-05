@@ -1,0 +1,5 @@
+  File "/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration/map_utils.py", line 290
+    self.get_logger().info(f"boxes: "  {boxes})
+                           ^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+

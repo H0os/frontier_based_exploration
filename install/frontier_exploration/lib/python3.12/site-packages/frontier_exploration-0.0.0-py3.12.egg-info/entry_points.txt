@@ -1,0 +1,7 @@
+[console_scripts]
+exploration = frontier_exploration.exploration:main
+map_utils = frontier_exploration.map_utils:main
+metric_subscriber = frontier_exploration.metric_subscriber:main
+training_data_collector = frontier_exploration.training_data_collector:main
+tree_node = frontier_exploration.tree_node:main
+wavefront_frontier_exploration = frontier_exploration.wavefront_frontier_exploration:main

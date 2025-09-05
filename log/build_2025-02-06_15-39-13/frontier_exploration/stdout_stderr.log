@@ -1,0 +1,29 @@
+running egg_info
+writing ../build/frontier_exploration/frontier_exploration.egg-info/PKG-INFO
+writing dependency_links to ../build/frontier_exploration/frontier_exploration.egg-info/dependency_links.txt
+writing entry points to ../build/frontier_exploration/frontier_exploration.egg-info/entry_points.txt
+writing requirements to ../build/frontier_exploration/frontier_exploration.egg-info/requires.txt
+writing top-level names to ../build/frontier_exploration/frontier_exploration.egg-info/top_level.txt
+reading manifest file '../build/frontier_exploration/frontier_exploration.egg-info/SOURCES.txt'
+writing manifest file '../build/frontier_exploration/frontier_exploration.egg-info/SOURCES.txt'
+running build
+running build_py
+copying frontier_exploration/map_utils copy.py -> /home/aymon/frontier_exploration_ws/build/frontier_exploration/build/lib/frontier_exploration
+copying frontier_exploration/__init__.py -> /home/aymon/frontier_exploration_ws/build/frontier_exploration/build/lib/frontier_exploration
+running install
+running install_lib
+copying /home/aymon/frontier_exploration_ws/build/frontier_exploration/build/lib/frontier_exploration/map_utils copy.py -> /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration
+copying /home/aymon/frontier_exploration_ws/build/frontier_exploration/build/lib/frontier_exploration/__init__.py -> /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration
+byte-compiling /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration/map_utils copy.py to map_utils copy.cpython-312.pyc
+byte-compiling /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration/__init__.py to __init__.cpython-312.pyc
+running install_data
+copying package.xml -> /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration
+running install_egg_info
+removing '/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../build/frontier_exploration/frontier_exploration.egg-info to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration-0.0.0-py3.12.egg-info
+running install_scripts
+Installing exploration script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration
+Installing map_utils script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration
+Installing metric_subscriber script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration
+Installing training_data_collector script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration
+writing list of installed files to '/home/aymon/frontier_exploration_ws/build/frontier_exploration/install.log'

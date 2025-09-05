@@ -1,0 +1,4 @@
+source;share/frontier_exploration/local_setup.bash
+source;share/frontier_exploration/local_setup.dsv
+source;share/frontier_exploration/local_setup.sh
+source;share/frontier_exploration/local_setup.zsh

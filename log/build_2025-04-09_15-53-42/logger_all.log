@@ -1,0 +1,202 @@
+[0.494s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.495s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7b17249b5e80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7b1724ad6180>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7b1724ad6180>>, mixin_verb=('build',))
+[0.704s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.706s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.706s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.706s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.706s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.707s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.707s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/aymon/frontier_exploration_ws'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.835s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.835s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.835s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.838s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.838s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.838s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.839s] Level 1:colcon.colcon_core.package_identification:_identify(frontier_exploration) by extensions ['ignore', 'ignore_ament_install']
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(frontier_exploration) by extension 'ignore'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(frontier_exploration) by extension 'ignore_ament_install'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(frontier_exploration) by extensions ['colcon_pkg']
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(frontier_exploration) by extension 'colcon_pkg'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(frontier_exploration) by extensions ['colcon_meta']
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(frontier_exploration) by extension 'colcon_meta'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(frontier_exploration) by extensions ['ros']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(frontier_exploration) by extension 'ros'
+[0.848s] DEBUG:colcon.colcon_core.package_identification:Package 'frontier_exploration' with type 'ros.ament_python' and name 'frontier_exploration'
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.850s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extensions ['ignore', 'ignore_ament_install']
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extension 'ignore'
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extension 'ignore_ament_install'
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extensions ['colcon_pkg']
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extension 'colcon_pkg'
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extensions ['colcon_meta']
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extension 'colcon_meta'
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extensions ['ros']
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extension 'ros'
+[0.853s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extensions ['cmake', 'python']
+[0.853s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extension 'cmake'
+[0.853s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extension 'python'
+[0.853s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extensions ['python_setup_py']
+[0.853s] Level 1:colcon.colcon_core.package_identification:_identify(training_data) by extension 'python_setup_py'
+[0.854s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extensions ['ignore', 'ignore_ament_install']
+[0.854s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extension 'ignore'
+[0.854s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extension 'ignore_ament_install'
+[0.854s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extensions ['colcon_pkg']
+[0.855s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extension 'colcon_pkg'
+[0.855s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extensions ['colcon_meta']
+[0.855s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extension 'colcon_meta'
+[0.855s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extensions ['ros']
+[0.855s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extension 'ros'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extensions ['cmake', 'python']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extension 'cmake'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extension 'python'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extensions ['python_setup_py']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/16_01_2025_12_44_18) by extension 'python_setup_py'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extensions ['ignore', 'ignore_ament_install']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extension 'ignore'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extension 'ignore_ament_install'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extensions ['colcon_pkg']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extension 'colcon_pkg'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extensions ['colcon_meta']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extension 'colcon_meta'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extensions ['ros']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extension 'ros'
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extensions ['cmake', 'python']
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extension 'cmake'
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extension 'python'
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extensions ['python_setup_py']
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_27_07) by extension 'python_setup_py'
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extensions ['ignore', 'ignore_ament_install']
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extension 'ignore'
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extension 'ignore_ament_install'
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extensions ['colcon_pkg']
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extension 'colcon_pkg'
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extensions ['colcon_meta']
+[0.861s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extension 'colcon_meta'
+[0.861s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extensions ['ros']
+[0.861s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extension 'ros'
+[0.861s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extensions ['cmake', 'python']
+[0.861s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extension 'cmake'
+[0.861s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extension 'python'
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extensions ['python_setup_py']
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_12_52_26) by extension 'python_setup_py'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extensions ['ignore', 'ignore_ament_install']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extension 'ignore'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extension 'ignore_ament_install'
+[0.864s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extensions ['colcon_pkg']
+[0.864s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extension 'colcon_pkg'
+[0.864s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extensions ['colcon_meta']
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extension 'colcon_meta'
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extensions ['ros']
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extension 'ros'
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extensions ['cmake', 'python']
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extension 'cmake'
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extension 'python'
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extensions ['python_setup_py']
+[0.866s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/17_01_2025_14_13_19) by extension 'python_setup_py'
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extensions ['ignore', 'ignore_ament_install']
+[0.868s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extension 'ignore'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extension 'ignore_ament_install'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extensions ['colcon_pkg']
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extension 'colcon_pkg'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extensions ['colcon_meta']
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extension 'colcon_meta'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extensions ['ros']
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extension 'ros'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extensions ['cmake', 'python']
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extension 'cmake'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extension 'python'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extensions ['python_setup_py']
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(training_data/21_01_2025_13_16_14) by extension 'python_setup_py'
+[0.871s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.871s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.871s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.871s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.871s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.953s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.953s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.966s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/aymon/frontier_exploration_ws/install
+[0.968s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 10 installed packages in /home/aymon/turtlebot4_ws/install
+[0.978s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 453 installed packages in /opt/ros/jazzy
+[0.986s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'frontier_exploration' build argument 'cmake_args' from command line to 'None'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'frontier_exploration' build argument 'cmake_target' from command line to 'None'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'frontier_exploration' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'frontier_exploration' build argument 'cmake_clean_cache' from command line to 'False'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'frontier_exploration' build argument 'cmake_clean_first' from command line to 'False'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'frontier_exploration' build argument 'cmake_force_configure' from command line to 'False'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'frontier_exploration' build argument 'ament_cmake_args' from command line to 'None'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'frontier_exploration' build argument 'catkin_cmake_args' from command line to 'None'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'frontier_exploration' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.223s] DEBUG:colcon.colcon_core.verb:Building package 'frontier_exploration' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/aymon/frontier_exploration_ws/build/frontier_exploration', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/aymon/frontier_exploration_ws/install/frontier_exploration', 'merge_install': False, 'path': '/home/aymon/frontier_exploration_ws/frontier_exploration', 'symlink_install': False, 'test_result_base': None}
+[1.224s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.227s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.227s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/aymon/frontier_exploration_ws/frontier_exploration' with build type 'ament_python'
+[1.227s] Level 1:colcon.colcon_core.shell:create_environment_hook('frontier_exploration', 'ament_prefix_path')
+[1.250s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.251s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/hook/ament_prefix_path.ps1'
+[1.254s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/hook/ament_prefix_path.dsv'
+[1.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/hook/ament_prefix_path.sh'
+[1.259s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.259s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.172s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/aymon/frontier_exploration_ws/frontier_exploration'
+[2.172s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.172s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.802s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/aymon/frontier_exploration_ws/frontier_exploration': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/aymon/frontier_exploration_ws/build/frontier_exploration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/frontier_exploration build --build-base /home/aymon/frontier_exploration_ws/build/frontier_exploration/build install --record /home/aymon/frontier_exploration_ws/build/frontier_exploration/install.log --single-version-externally-managed install_data
+[6.880s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/aymon/frontier_exploration_ws/frontier_exploration' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/aymon/frontier_exploration_ws/build/frontier_exploration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/frontier_exploration build --build-base /home/aymon/frontier_exploration_ws/build/frontier_exploration/build install --record /home/aymon/frontier_exploration_ws/build/frontier_exploration/install.log --single-version-externally-managed install_data
+[6.903s] Level 1:colcon.colcon_core.environment:checking '/home/aymon/frontier_exploration_ws/install/frontier_exploration' for CMake module files
+[6.905s] Level 1:colcon.colcon_core.environment:checking '/home/aymon/frontier_exploration_ws/install/frontier_exploration' for CMake config files
+[6.906s] Level 1:colcon.colcon_core.shell:create_environment_hook('frontier_exploration', 'cmake_prefix_path')
+[6.907s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/hook/cmake_prefix_path.ps1'
+[6.909s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/hook/cmake_prefix_path.dsv'
+[6.910s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/hook/cmake_prefix_path.sh'
+[6.912s] Level 1:colcon.colcon_core.environment:checking '/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib'
+[6.912s] Level 1:colcon.colcon_core.environment:checking '/home/aymon/frontier_exploration_ws/install/frontier_exploration/bin'
+[6.912s] Level 1:colcon.colcon_core.environment:checking '/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/pkgconfig/frontier_exploration.pc'
+[6.913s] Level 1:colcon.colcon_core.environment:checking '/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages'
+[6.913s] Level 1:colcon.colcon_core.shell:create_environment_hook('frontier_exploration', 'pythonpath')
+[6.914s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/hook/pythonpath.ps1'
+[6.916s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/hook/pythonpath.dsv'
+[6.917s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/hook/pythonpath.sh'
+[6.919s] Level 1:colcon.colcon_core.environment:checking '/home/aymon/frontier_exploration_ws/install/frontier_exploration/bin'
+[6.919s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(frontier_exploration)
+[6.920s] INFO:colcon.colcon_core.shell:Creating package script '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/package.ps1'
+[6.923s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/package.dsv'
+[6.925s] INFO:colcon.colcon_core.shell:Creating package script '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/package.sh'
+[6.929s] INFO:colcon.colcon_core.shell:Creating package script '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/package.bash'
+[6.932s] INFO:colcon.colcon_core.shell:Creating package script '/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/package.zsh'
+[6.935s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/aymon/frontier_exploration_ws/install/frontier_exploration/share/colcon-core/packages/frontier_exploration)
+[6.936s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.937s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.938s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.938s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.012s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.012s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.013s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.053s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.055s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/aymon/frontier_exploration_ws/install/local_setup.ps1'
+[7.057s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/aymon/frontier_exploration_ws/install/_local_setup_util_ps1.py'
+[7.064s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/aymon/frontier_exploration_ws/install/setup.ps1'
+[7.070s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/aymon/frontier_exploration_ws/install/local_setup.sh'
+[7.073s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/aymon/frontier_exploration_ws/install/_local_setup_util_sh.py'
+[7.079s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/aymon/frontier_exploration_ws/install/setup.sh'
+[7.084s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/aymon/frontier_exploration_ws/install/local_setup.bash'
+[7.086s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/aymon/frontier_exploration_ws/install/setup.bash'
+[7.090s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/aymon/frontier_exploration_ws/install/local_setup.zsh'
+[7.092s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/aymon/frontier_exploration_ws/install/setup.zsh'

@@ -1,0 +1,20 @@
+[0.035s] Invoking command in '/home/aymon/frontier_exploration_ws/build/frontier_exploration': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aymon/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/aymon/turtlebot4_ws/install/object_search:/home/aymon/turtlebot4_ws/install/frontier_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/aymon/frontier_exploration_ws/build/frontier_exploration -- -j16 -l16
+[0.170s] Invoked command in '/home/aymon/frontier_exploration_ws/build/frontier_exploration' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aymon/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/aymon/turtlebot4_ws/install/object_search:/home/aymon/turtlebot4_ws/install/frontier_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/aymon/frontier_exploration_ws/build/frontier_exploration -- -j16 -l16
+[0.207s] Invoking command in '/home/aymon/frontier_exploration_ws/build/frontier_exploration': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aymon/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/aymon/turtlebot4_ws/install/object_search:/home/aymon/turtlebot4_ws/install/frontier_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/aymon/frontier_exploration_ws/build/frontier_exploration
+[0.235s] -- Install configuration: ""
+[0.237s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/ament_index/resource_index/package_run_dependencies/frontier_exploration
+[0.237s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/ament_index/resource_index/parent_prefix_path/frontier_exploration
+[0.238s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/environment/ament_prefix_path.sh
+[0.238s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/environment/ament_prefix_path.dsv
+[0.238s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/environment/path.sh
+[0.238s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/environment/path.dsv
+[0.239s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/local_setup.bash
+[0.239s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/local_setup.sh
+[0.239s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/local_setup.zsh
+[0.239s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/local_setup.dsv
+[0.240s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/package.dsv
+[0.240s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/ament_index/resource_index/packages/frontier_exploration
+[0.240s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/cmake/frontier_explorationConfig.cmake
+[0.240s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/cmake/frontier_explorationConfig-version.cmake
+[0.241s] -- Up-to-date: /home/aymon/frontier_exploration_ws/install/frontier_exploration/share/frontier_exploration/package.xml
+[0.246s] Invoked command in '/home/aymon/frontier_exploration_ws/build/frontier_exploration' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aymon/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/aymon/turtlebot4_ws/install/object_search:/home/aymon/turtlebot4_ws/install/frontier_exploration:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/aymon/frontier_exploration_ws/build/frontier_exploration

@@ -1,0 +1,155 @@
+[0.000000] (-) TimerEvent: {}
+[0.001319] (frontier_exploration) JobQueued: {'identifier': 'frontier_exploration', 'dependencies': OrderedDict()}
+[0.003369] (frontier_exploration) JobStarted: {'identifier': 'frontier_exploration'}
+[0.097723] (-) TimerEvent: {}
+[0.200190] (-) TimerEvent: {}
+[0.305262] (-) TimerEvent: {}
+[0.408617] (-) TimerEvent: {}
+[0.510887] (-) TimerEvent: {}
+[0.611464] (-) TimerEvent: {}
+[0.712156] (-) TimerEvent: {}
+[0.814933] (-) TimerEvent: {}
+[0.916353] (-) TimerEvent: {}
+[1.026703] (-) TimerEvent: {}
+[1.132688] (-) TimerEvent: {}
+[1.237616] (-) TimerEvent: {}
+[1.350782] (-) TimerEvent: {}
+[1.453441] (-) TimerEvent: {}
+[1.554840] (-) TimerEvent: {}
+[1.656402] (-) TimerEvent: {}
+[1.758688] (-) TimerEvent: {}
+[1.859620] (-) TimerEvent: {}
+[1.962441] (-) TimerEvent: {}
+[2.066166] (-) TimerEvent: {}
+[2.171645] (-) TimerEvent: {}
+[2.273620] (-) TimerEvent: {}
+[2.378262] (-) TimerEvent: {}
+[2.489540] (-) TimerEvent: {}
+[2.591190] (-) TimerEvent: {}
+[2.693452] (-) TimerEvent: {}
+[2.797528] (-) TimerEvent: {}
+[2.898436] (-) TimerEvent: {}
+[3.007804] (-) TimerEvent: {}
+[3.114493] (-) TimerEvent: {}
+[3.218512] (-) TimerEvent: {}
+[3.324379] (-) TimerEvent: {}
+[3.426216] (-) TimerEvent: {}
+[3.528510] (-) TimerEvent: {}
+[3.629786] (-) TimerEvent: {}
+[3.736837] (-) TimerEvent: {}
+[3.838256] (-) TimerEvent: {}
+[3.939210] (-) TimerEvent: {}
+[4.044482] (-) TimerEvent: {}
+[4.145198] (-) TimerEvent: {}
+[4.248166] (-) TimerEvent: {}
+[4.350189] (-) TimerEvent: {}
+[4.452083] (-) TimerEvent: {}
+[4.556797] (-) TimerEvent: {}
+[4.661060] (-) TimerEvent: {}
+[4.763042] (-) TimerEvent: {}
+[4.865139] (-) TimerEvent: {}
+[4.967097] (-) TimerEvent: {}
+[5.070960] (-) TimerEvent: {}
+[5.176147] (-) TimerEvent: {}
+[5.280133] (-) TimerEvent: {}
+[5.381958] (-) TimerEvent: {}
+[5.486093] (-) TimerEvent: {}
+[5.590396] (-) TimerEvent: {}
+[5.696182] (-) TimerEvent: {}
+[5.802185] (-) TimerEvent: {}
+[5.908513] (-) TimerEvent: {}
+[6.010139] (-) TimerEvent: {}
+[6.111618] (-) TimerEvent: {}
+[6.214782] (-) TimerEvent: {}
+[6.318287] (-) TimerEvent: {}
+[6.421749] (-) TimerEvent: {}
+[6.524788] (-) TimerEvent: {}
+[6.626574] (-) TimerEvent: {}
+[6.728184] (-) TimerEvent: {}
+[6.833142] (-) TimerEvent: {}
+[6.934418] (-) TimerEvent: {}
+[7.034976] (-) TimerEvent: {}
+[7.135634] (-) TimerEvent: {}
+[7.237840] (-) TimerEvent: {}
+[7.338666] (-) TimerEvent: {}
+[7.442219] (-) TimerEvent: {}
+[7.543744] (-) TimerEvent: {}
+[7.645404] (-) TimerEvent: {}
+[7.746217] (-) TimerEvent: {}
+[7.847804] (-) TimerEvent: {}
+[7.950079] (-) TimerEvent: {}
+[8.051615] (-) TimerEvent: {}
+[8.154467] (-) TimerEvent: {}
+[8.178908] (frontier_exploration) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/frontier_exploration', 'build', '--build-base', '/home/aymon/frontier_exploration_ws/build/frontier_exploration/build', 'install', '--record', '/home/aymon/frontier_exploration_ws/build/frontier_exploration/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/aymon/frontier_exploration_ws/frontier_exploration', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'aymon', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/aymon/turtlebot4_ws/install/ros_gz_sim/lib:/home/aymon/turtlebot4_ws/install/ros_gz_bridge/lib:/home/aymon/turtlebot4_ws/install/ros_gz_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/aymon', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2772', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/aymon/frontier_exploration_ws/install:/home/aymon/turtlebot4_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'aymon', 'IGN_GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'aymon', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/aymon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/aymon/.local/bin:/home/aymon/.local/bin', 'SESSION_MANAGER': 'local/aymon-ROG-Flow-X13-GV301QE-GV301QE:@/tmp/.ICE-unix/2740,unix/aymon-ROG-Flow-X13-GV301QE-GV301QE:/tmp/.ICE-unix/2740', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b45b82bb_a393_4888_b83c_e5e3c0b4ed1e', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.175', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/aymon/frontier_exploration_ws/install/frontier_exploration:/home/aymon/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/aymon/turtlebot4_ws/install/test_ros_gz_bridge:/home/aymon/turtlebot4_ws/install/ros_gz:/home/aymon/turtlebot4_ws/install/ros_gz_sim_demos:/home/aymon/turtlebot4_ws/install/ros_gz_sim:/home/aymon/turtlebot4_ws/install/ros_gz_image:/home/aymon/turtlebot4_ws/install/ros_gz_bridge:/home/aymon/turtlebot4_ws/install/ros_gz_interfaces:/home/aymon/turtlebot4_ws/install/object_search:/home/aymon/turtlebot4_ws/install/frontier_exploration:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/home/aymon/turtlebot4_ws/install/ros_gz_sim_demos/share:/opt/ros/jazzy/share', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GSK_RENDERER': 'gl', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/aymon/frontier_exploration_ws/build/frontier_exploration', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/aymon/frontier_exploration_ws/build/frontier_exploration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages:/home/aymon/frontier_exploration_ws/install/my-test-package/lib/python3.12/site-packages:/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages:/home/aymon/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.12/site-packages:/home/aymon/turtlebot4_ws/install/ros_gz_sim/lib/python3.12/site-packages:/home/aymon/turtlebot4_ws/install/ros_gz_bridge/lib/python3.12/site-packages:/home/aymon/turtlebot4_ws/install/ros_gz_interfaces/lib/python3.12/site-packages:/home/aymon/turtlebot4_ws/install/object_search/lib/python3.12/site-packages:/home/aymon/turtlebot4_ws/install/frontier_exploration/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/aymon/frontier_exploration_ws/install/frontier_exploration:/home/aymon/turtlebot4_ws/install/test_ros_gz_bridge:/home/aymon/turtlebot4_ws/install/ros_gz:/home/aymon/turtlebot4_ws/install/ros_gz_sim_demos:/home/aymon/turtlebot4_ws/install/ros_gz_sim:/home/aymon/turtlebot4_ws/install/ros_gz_image:/home/aymon/turtlebot4_ws/install/ros_gz_bridge:/home/aymon/turtlebot4_ws/install/ros_gz_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[8.254953] (-) TimerEvent: {}
+[8.360129] (-) TimerEvent: {}
+[8.461299] (-) TimerEvent: {}
+[8.562027] (-) TimerEvent: {}
+[8.664797] (-) TimerEvent: {}
+[8.765943] (-) TimerEvent: {}
+[8.868010] (-) TimerEvent: {}
+[8.970041] (-) TimerEvent: {}
+[9.071643] (-) TimerEvent: {}
+[9.173935] (-) TimerEvent: {}
+[9.275717] (-) TimerEvent: {}
+[9.377377] (-) TimerEvent: {}
+[9.477783] (-) TimerEvent: {}
+[9.580309] (-) TimerEvent: {}
+[9.681809] (-) TimerEvent: {}
+[9.782415] (-) TimerEvent: {}
+[9.883126] (-) TimerEvent: {}
+[9.985310] (-) TimerEvent: {}
+[10.093354] (-) TimerEvent: {}
+[10.199738] (-) TimerEvent: {}
+[10.303390] (-) TimerEvent: {}
+[10.323605] (frontier_exploration) StdoutLine: {'line': b'running egg_info\n'}
+[10.403701] (-) TimerEvent: {}
+[10.466077] (frontier_exploration) StdoutLine: {'line': b'writing ../build/frontier_exploration/frontier_exploration.egg-info/PKG-INFO\n'}
+[10.469464] (frontier_exploration) StdoutLine: {'line': b'writing dependency_links to ../build/frontier_exploration/frontier_exploration.egg-info/dependency_links.txt\n'}
+[10.470213] (frontier_exploration) StdoutLine: {'line': b'writing entry points to ../build/frontier_exploration/frontier_exploration.egg-info/entry_points.txt\n'}
+[10.471963] (frontier_exploration) StdoutLine: {'line': b'writing requirements to ../build/frontier_exploration/frontier_exploration.egg-info/requires.txt\n'}
+[10.474448] (frontier_exploration) StdoutLine: {'line': b'writing top-level names to ../build/frontier_exploration/frontier_exploration.egg-info/top_level.txt\n'}
+[10.504086] (-) TimerEvent: {}
+[10.606138] (-) TimerEvent: {}
+[10.709148] (-) TimerEvent: {}
+[10.745754] (frontier_exploration) StdoutLine: {'line': b"reading manifest file '../build/frontier_exploration/frontier_exploration.egg-info/SOURCES.txt'\n"}
+[10.754045] (frontier_exploration) StdoutLine: {'line': b"writing manifest file '../build/frontier_exploration/frontier_exploration.egg-info/SOURCES.txt'\n"}
+[10.757941] (frontier_exploration) StdoutLine: {'line': b'running build\n'}
+[10.761303] (frontier_exploration) StdoutLine: {'line': b'running build_py\n'}
+[10.764121] (frontier_exploration) StdoutLine: {'line': b'copying frontier_exploration/map_utils.py -> /home/aymon/frontier_exploration_ws/build/frontier_exploration/build/lib/frontier_exploration\n'}
+[10.765733] (frontier_exploration) StdoutLine: {'line': b'running install\n'}
+[10.801257] (frontier_exploration) StdoutLine: {'line': b'running install_lib\n'}
+[10.811030] (-) TimerEvent: {}
+[10.911597] (-) TimerEvent: {}
+[10.949510] (frontier_exploration) StdoutLine: {'line': b'copying /home/aymon/frontier_exploration_ws/build/frontier_exploration/build/lib/frontier_exploration/map_utils.py -> /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration\n'}
+[10.951418] (frontier_exploration) StdoutLine: {'line': b'byte-compiling /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration/map_utils.py to map_utils.cpython-312.pyc\n'}
+[10.963258] (frontier_exploration) StdoutLine: {'line': b'running install_data\n'}
+[10.966264] (frontier_exploration) StdoutLine: {'line': b'running install_egg_info\n'}
+[11.012009] (-) TimerEvent: {}
+[11.108164] (frontier_exploration) StdoutLine: {'line': b"removing '/home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[11.110600] (frontier_exploration) StdoutLine: {'line': b'Copying ../build/frontier_exploration/frontier_exploration.egg-info to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/python3.12/site-packages/frontier_exploration-0.0.0-py3.12.egg-info\n'}
+[11.112265] (-) TimerEvent: {}
+[11.115467] (frontier_exploration) StdoutLine: {'line': b'running install_scripts\n'}
+[11.212593] (-) TimerEvent: {}
+[11.314812] (-) TimerEvent: {}
+[11.416640] (-) TimerEvent: {}
+[11.519126] (-) TimerEvent: {}
+[11.622564] (-) TimerEvent: {}
+[11.730967] (-) TimerEvent: {}
+[11.832099] (-) TimerEvent: {}
+[11.933295] (-) TimerEvent: {}
+[12.036035] (-) TimerEvent: {}
+[12.044022] (frontier_exploration) StdoutLine: {'line': b'Installing exploration script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration\n'}
+[12.044704] (frontier_exploration) StdoutLine: {'line': b'Installing map_utils script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration\n'}
+[12.051219] (frontier_exploration) StdoutLine: {'line': b'Installing metric_subscriber script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration\n'}
+[12.051891] (frontier_exploration) StdoutLine: {'line': b'Installing training_data_collector script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration\n'}
+[12.052253] (frontier_exploration) StdoutLine: {'line': b'Installing tree_node script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration\n'}
+[12.052562] (frontier_exploration) StdoutLine: {'line': b'Installing wavefront_frontier_exploration script to /home/aymon/frontier_exploration_ws/install/frontier_exploration/lib/frontier_exploration\n'}
+[12.053144] (frontier_exploration) StdoutLine: {'line': b"writing list of installed files to '/home/aymon/frontier_exploration_ws/build/frontier_exploration/install.log'\n"}
+[12.138400] (-) TimerEvent: {}
+[12.242896] (-) TimerEvent: {}
+[12.315420] (frontier_exploration) CommandEnded: {'returncode': 0}
+[12.345311] (-) TimerEvent: {}
+[12.435237] (frontier_exploration) JobEnded: {'identifier': 'frontier_exploration', 'rc': 0}
+[12.445598] (-) TimerEvent: {}
+[12.447347] (-) EventReactorShutdown: {}

@@ -1,0 +1,13 @@
+# Default configuration for frontier exploration project
+# Adjust parameters as needed
+
+simulation:
+  world: warehouse
+  slam: true
+  nav2: true
+  rviz: true
+
+exploration:
+  max_steps: 1000
+  frontier_detection_algorithm: grid_tree
+  goal_selection: bayesian_optimisation

@@ -23,7 +23,25 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  ros-${ROS_DISTRO}-rmw-cyclonedds-cpp
 ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
-RUN apt-get install ros-jazzy-turtlebot4-simulator ros-jazzy-irobot-create-nodes
+RUN mkdir -p ~/turtlebot_ws/src
+WORKDIR turtlebot_ws/src
+
+# Clone the repos (jazzy branches)
+RUN git clone -b jazzy https://github.com/turtlebot/turtlebot4_simulator.git
+RUN git clone -b jazzy https://github.com/iRobotEducation/irobot_create_ros.git
+
+# Go back to workspace root
+WORKDIR turtlebot_ws
+
+# Install dependencies
+RUN rosdep update
+RUN rosdep install --from-paths src --ignore-src -r -y
+
+# Build
+RUN colcon build --symlink-install
+
+# Source it
+RUN source install/setup.bash
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
  curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg \

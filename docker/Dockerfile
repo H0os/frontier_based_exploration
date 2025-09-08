@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  ros-${ROS_DISTRO}-rmw-cyclonedds-cpp
 ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
-RUN apt install ros-jazzy-turtlebot4-simulator ros-jazzy-irobot-create-nodes
+RUN apt-get install ros-jazzy-turtlebot4-simulator ros-jazzy-irobot-create-nodes
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
  curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg \

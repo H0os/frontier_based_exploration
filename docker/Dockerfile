@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install additional Python modules
 RUN pip3 install --break-system-packages matplotlib transforms3d
 
-RUN pip3 install ultralytics
+RUN pip3 install --break-system-packages ultralytics 
 
 # Use Cyclone DDS as middleware
 RUN apt-get update && apt-get install -y --no-install-recommends \

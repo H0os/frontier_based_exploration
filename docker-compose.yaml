@@ -69,13 +69,3 @@ services:
     extends: overlay
     command: ros2 run frontier_exploration exploration 
   
-
-
-  # Behavior demo using C++ and BehaviorTree.CPP
-  demo-behavior-cpp:
-    extends: overlay
-    command: >
-      ros2 launch tb_autonomy tb_demo_behavior_cpp.launch.py
-      tree_type:=${BT_TYPE:?}
-      enable_vision:=${ENABLE_VISION:?}
-      target_color:=${TARGET_COLOR:?}

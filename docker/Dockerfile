@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  curl git libcanberra-gtk-module libcanberra-gtk3-module fuse3 libfuse2 libqt5svg5-dev \
  python3-pip python3-opencv python3-tk python3-pyqt5.qtwebengine
 
-UN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-${ROS_DISTRO}-rviz2 \
     ros-${ROS_DISTRO}-turtlebot4-desktop \
     libgl1-mesa-glx libgl1-mesa-dri xauth \

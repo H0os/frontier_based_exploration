@@ -35,11 +35,16 @@ services:
       # Allows graphical programs in the container.
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
+      - XAUTHORITY=/root/.Xauthority
       - NVIDIA_DRIVER_CAPABILITIES=all
     volumes:
       # Allows graphical programs in the container.
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - ${XAUTHORITY:-$HOME/.Xauthority}:/root/.Xauthority
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - video
 
   # Overlay image containing the example source code.
   overlay:

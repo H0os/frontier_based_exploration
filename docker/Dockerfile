@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  curl git libcanberra-gtk-module libcanberra-gtk3-module fuse3 libfuse2 libqt5svg5-dev \
  python3-pip python3-opencv python3-tk python3-pyqt5.qtwebengine
 
+RUN apt-get install ros-jazzy-turtlebot4-simulator ros-jazzy-irobot-create-nodes
+  
 # Install additional Python modules
 RUN pip3 install --break-system-packages matplotlib transforms3d
 
@@ -32,8 +34,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Create Colcon workspace with external dependencies
 RUN mkdir -p /frontier_exploration_ws/src
 WORKDIR /frontier_exploration_ws/src
-COPY dependencies.repos .
-RUN vcs import < dependencies.repos
+# COPY dependencies.repos .
+# RUN vcs import < dependencies.repos
 
 # Build the base Colcon workspace, installing dependencies first.
 WORKDIR /frontier_exploration_ws

@@ -16,16 +16,24 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install additional Python modules
 RUN pip3 install --break-system-packages matplotlib transforms3d
 
+RUN pip3 install ultralytics
+
 # Use Cyclone DDS as middleware
 RUN apt-get update && apt-get install -y --no-install-recommends \
  ros-${ROS_DISTRO}-rmw-cyclonedds-cpp
 ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+ curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg \
+ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null \
+ apt-get update \
+ apt-get install gz-harmonic
+
 # Create Colcon workspace with external dependencies
 RUN mkdir -p /frontier_exploration_ws/src
 WORKDIR /frontier_exploration_ws/src
-COPY dependencies.repos .
-RUN vcs import < dependencies.repos
+# COPY dependencies.repos .
+# RUN vcs import < dependencies.repos
 
 # Build the base Colcon workspace, installing dependencies first.
 WORKDIR /frontier_exploration_ws
@@ -54,8 +62,7 @@ FROM base AS overlay
 # Create an overlay Colcon workspace
 RUN mkdir -p /overlay_ws/src
 WORKDIR /overlay_ws
-COPY ./tb_autonomy/ ./src/tb_autonomy/
-COPY ./tb_worlds/ ./src/tb_worlds/
+COPY ./frontier_exploration/ ./src/frontier_exploration/
 RUN source /frontier_exploration_ws/install/setup.bash \
  && rosdep install --from-paths src --ignore-src --rosdistro ${ROS_DISTRO} -y \
  && colcon build --symlink-install

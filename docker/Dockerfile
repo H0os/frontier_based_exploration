@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  curl git libcanberra-gtk-module libcanberra-gtk3-module fuse3 libfuse2 libqt5svg5-dev \
  python3-pip python3-opencv python3-tk python3-pyqt5.qtwebengine
 
-RUN apt-get install ros-jazzy-turtlebot4-simulator ros-jazzy-irobot-create-nodes
+RUN apt-get install -y --no-install-recommendsup ros-jazzy-turtlebot4-simulator ros-jazzy-irobot-create-nodes
   
 # Install additional Python modules
 RUN pip3 install --break-system-packages matplotlib transforms3d

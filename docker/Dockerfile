@@ -14,8 +14,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  python3-pip python3-opencv python3-tk python3-pyqt5.qtwebengine
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ros-${ROS_DISTRO}-rviz2 \
-    ros-${ROS_DISTRO}-turtlebot4-desktop \
     ros-${ROS_DISTRO}-turtlebot4-simulator \
     mesa-utils libgl1-mesa-dri xauth x11-apps \
     && (apt-get install -y libgl1-mesa-glx || apt-get install -y libgl1 libglx-mesa0) \

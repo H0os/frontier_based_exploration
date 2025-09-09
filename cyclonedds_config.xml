@@ -3,7 +3,7 @@
   <Domain id="any">
     <Discovery>
       <!-- Raise from the default 120 to e.g. 300 -->
-      <MaxAutoParticipantIndex>300</MaxAutoParticipantIndex>
+      <MaxAutoParticipantIndex>600</MaxAutoParticipantIndex>
     </Discovery>
   </Domain>
 </CycloneDDS>

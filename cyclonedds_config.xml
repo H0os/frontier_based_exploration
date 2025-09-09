@@ -1,0 +1,7 @@
+<CycloneDDS>
+  <Domain id="any">
+    <General>
+      <MaxParticipants>300</MaxParticipants>
+    </General>
+  </Domain>
+</CycloneDDS>

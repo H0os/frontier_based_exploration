@@ -37,6 +37,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  apt-get update \
  apt-get install gz-harmonic
 
+COPY control.yaml /opt/ros/jazzy/share/irobot_create_control/config/control.yaml
+
 # Create Colcon workspace with external dependencies
 RUN mkdir -p /frontier_exploration_ws/src
 WORKDIR /frontier_exploration_ws/src

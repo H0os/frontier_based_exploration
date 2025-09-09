@@ -69,7 +69,7 @@ FROM base AS overlay
 
 # Create an overlay Colcon workspace
 RUN mkdir -p /overlay_ws/src
-#COPY cyclonedds_config.xml /overlay_ws/cyclonedds_config.xml
+COPY cyclonedds_config.xml /overlay_ws/cyclonedds_config.xml
 #ENV CYCLONEDDS_URI=file:///overlay_ws/cyclonedds_config.xml
 WORKDIR /overlay_ws
 COPY ./frontier_exploration/ ./src/frontier_exploration/

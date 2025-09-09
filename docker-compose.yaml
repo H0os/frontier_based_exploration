@@ -37,6 +37,7 @@ services:
       - QT_X11_NO_MITSHM=1
       - XAUTHORITY=/root/.Xauthority
       - NVIDIA_DRIVER_CAPABILITIES=all
+      - CYCLONEDDS_URI=file:///overlay_ws/cyclonedds_config.xml
     volumes:
       # Allows graphical programs in the container.
       - /tmp/.X11-unix:/tmp/.X11-unix:rw

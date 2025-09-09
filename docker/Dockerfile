@@ -13,6 +13,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  curl git libcanberra-gtk-module libcanberra-gtk3-module fuse3 libfuse2 libqt5svg5-dev \
  python3-pip python3-opencv python3-tk python3-pyqt5.qtwebengine
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-${ROS_DISTRO}-rviz2 \
+    ros-${ROS_DISTRO}-turtlebot4-desktop \
+    ros-${ROS_DISTRO}-turtlebot4-simulator \
+    ros-${ROS_DISTRO}-irobot-create-nodes \
+    mesa-utils libgl1-mesa-dri xauth x11-apps \
+    && (apt-get install -y libgl1-mesa-glx || apt-get install -y libgl1 libglx-mesa0) \
+    && rm -rf /var/lib/apt/lists/*
 # Install additional Python modules
 RUN pip3 install --break-system-packages matplotlib transforms3d
 
@@ -32,8 +40,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Create Colcon workspace with external dependencies
 RUN mkdir -p /frontier_exploration_ws/src
 WORKDIR /frontier_exploration_ws/src
-COPY dependencies.repos .
-RUN vcs import < dependencies.repos
+# COPY dependencies.repos .
+# RUN vcs import < dependencies.repos
 
 # Build the base Colcon workspace, installing dependencies first.
 WORKDIR /frontier_exploration_ws
@@ -63,7 +71,6 @@ FROM base AS overlay
 RUN mkdir -p /overlay_ws/src
 WORKDIR /overlay_ws
 COPY ./frontier_exploration/ ./src/frontier_exploration/
-COPY ./tb_worlds/ ./src/tb_worlds/
 RUN source /frontier_exploration_ws/install/setup.bash \
  && rosdep install --from-paths src --ignore-src --rosdistro ${ROS_DISTRO} -y \
  && colcon build --symlink-install

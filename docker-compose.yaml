@@ -31,15 +31,20 @@ services:
     privileged: True
     environment:
       # Needed to define a TurtleBot model type (3 or 4)
-      - TURTLEBOT_MODEL=${TURTLEBOT_MODEL:-3}
+      - TURTLEBOT_MODEL=${TURTLEBOT_MODEL:-4}
       # Allows graphical programs in the container.
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
+      - XAUTHORITY=/root/.Xauthority
       - NVIDIA_DRIVER_CAPABILITIES=all
     volumes:
       # Allows graphical programs in the container.
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - ${XAUTHORITY:-$HOME/.Xauthority}:/root/.Xauthority
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - video
 
   # Overlay image containing the example source code.
   overlay:
@@ -53,7 +58,9 @@ services:
   # Demo simulation world
   demo-world:
     extends: overlay
-    command: ros2 launch tb_worlds tb_demo_world.launch.py
+    command: /bin/bash -lc "source /opt/ros/jazzy/setup.bash && \
+                        [ -f /overlay_ws/install/setup.bash ] && source /overlay_ws/install/setup.bash || true && \
+                        ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py slam:=true nav2:=true rviz:=true world:=maze"
 
   # Behavior demo using Python and py_trees
   demo-frontier-detector-grid:

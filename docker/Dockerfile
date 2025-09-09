@@ -37,6 +37,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  apt-get install gz-harmonic
 
 COPY control.yaml /opt/ros/jazzy/share/irobot_create_control/config/control.yaml
+COPY mapper_params_lifelong.yaml /opt/ros/jazzy/share/slam_toolbox/config/mapper_params_lifelong.yaml
+COPY mapper_params_localization.yaml /opt/ros/jazzy/share/slam_toolbox/config/mapper_params_localization.yaml
+COPY mapper_params_offline.yaml /opt/ros/jazzy/share/slam_toolbox/config/mapper_params_offline.yaml
+COPY mapper_params_online_async.yaml /opt/ros/jazzy/share/slam_toolbox/config/mapper_params_online_async.yaml
+COPY mapper_params_online_sync.yaml /opt/ros/jazzy/share/slam_toolbox/config/mapper_params_online_sync.yaml
+
 
 # Create Colcon workspace with external dependencies
 RUN mkdir -p /frontier_exploration_ws/src

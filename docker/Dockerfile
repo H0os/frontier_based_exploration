@@ -17,7 +17,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-${ROS_DISTRO}-rviz2 \
     ros-${ROS_DISTRO}-turtlebot4-desktop \
     ros-${ROS_DISTRO}-turtlebot4-simulator \
-    ros-${ROS_DISTRO}-irobot-create-nodes \
     mesa-utils libgl1-mesa-dri xauth x11-apps \
     && (apt-get install -y libgl1-mesa-glx || apt-get install -y libgl1 libglx-mesa0) \
     && rm -rf /var/lib/apt/lists/*

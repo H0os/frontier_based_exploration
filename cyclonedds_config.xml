@@ -1,7 +1,9 @@
-<CycloneDDS>
+<?xml version="1.0" encoding="UTF-8" ?>
+<CycloneDDS xmlns="https://cdds.io/config">
   <Domain id="any">
-    <General>
-      <MaxParticipants>300</MaxParticipants>
-    </General>
+    <Discovery>
+      <!-- Raise from the default 120 to e.g. 300 -->
+      <MaxAutoParticipantIndex>300</MaxAutoParticipantIndex>
+    </Discovery>
   </Domain>
 </CycloneDDS>

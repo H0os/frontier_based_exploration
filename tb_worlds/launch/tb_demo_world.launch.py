@@ -41,13 +41,13 @@ def generate_launch_description():
     )
 
     declare_slam_cmd = DeclareLaunchArgument(
-        "slam", default_value="True", description="Whether run a SLAM"
+        "slam", default_value="False", description="Whether run a SLAM"
     )
 
-    # declare_map_yaml_cmd = DeclareLaunchArgument(
-    #     "map",
-    #     default_value=os.path.join(bringup_dir, "maps", "sim_house_map.yaml"),
-    # )
+    declare_map_yaml_cmd = DeclareLaunchArgument(
+        "map",
+        default_value=os.path.join(bringup_dir, "maps", "sim_house_map.yaml"),
+    )
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         "use_sim_time",
@@ -144,7 +144,7 @@ def generate_launch_description():
     # Declare the launch options
     ld.add_action(declare_namespace_cmd)
     ld.add_action(declare_slam_cmd)
-    # ld.add_action(declare_map_yaml_cmd)
+    ld.add_action(declare_map_yaml_cmd)
     ld.add_action(declare_use_sim_time_cmd)
     ld.add_action(declare_params_file_cmd)
     ld.add_action(declare_autostart_cmd)

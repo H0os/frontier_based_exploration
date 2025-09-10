@@ -60,7 +60,7 @@ def generate_launch_description():
 
     declare_world_cmd = DeclareLaunchArgument(
         "world",
-        default_value=os.path.join(bringup_dir, "worlds", "warehouse.sdf"),
+        default_value=os.path.join(bringup_dir, "worlds", "warehouse.sdf.xacro"),
         description="Full path to world model file to load",
     )
 
@@ -123,18 +123,18 @@ def generate_launch_description():
     # running in headless mode. But currently, the Gazebo command line doesn't
     # take SDF strings for worlds, so the output of xacro needs to be saved into
     # a temporary file and passed to Gazebo.
-    # world_sdf = tempfile.mktemp(prefix="tb_", suffix=".sdf")
-    # world_sdf_xacro = ExecuteProcess(cmd=["xacro", "-o", world_sdf, world])
+    world_sdf = tempfile.mktemp(prefix="tb_", suffix=".sdf")
+    world_sdf_xacro = ExecuteProcess(cmd=["xacro", "-o", world_sdf, world])
     gazebo = ExecuteProcess(
-        cmd=["gz", "sim", "-r", world],
+        cmd=["gz", "sim", "-r", world_sdf],
         output="screen",
     )
 
-    # remove_temp_sdf_file = RegisterEventHandler(
-    #     event_handler=OnShutdown(
-    #         on_shutdown=[OpaqueFunction(function=lambda _: os.remove(world_sdf))]
-    #     )
-    # )
+    remove_temp_sdf_file = RegisterEventHandler(
+        event_handler=OnShutdown(
+            on_shutdown=[OpaqueFunction(function=lambda _: os.remove(world_sdf))]
+        )
+    )
 
     gz_tb_spawner = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -163,8 +163,8 @@ def generate_launch_description():
             declare_world_cmd,
             declare_robot_name_cmd,
             declare_robot_sdf_cmd,
-            # world_sdf_xacro,
-            # remove_temp_sdf_file,
+            world_sdf_xacro,
+            remove_temp_sdf_file,
             gz_tb_spawner,
             gazebo,
             robot_state_publisher_cmd,

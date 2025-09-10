@@ -60,7 +60,7 @@ def generate_launch_description():
 
     declare_world_cmd = DeclareLaunchArgument(
         "world",
-        default_value=os.path.join(bringup_dir, "worlds", "warehouse.sdf.xacro"),
+        default_value=os.path.join(bringup_dir, "worlds", "warehouse.sdf"),
         description="Full path to world model file to load",
     )
 

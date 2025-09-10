@@ -60,7 +60,7 @@ def generate_launch_description():
 
     declare_world_cmd = DeclareLaunchArgument(
         "world",
-        default_value=os.path.join(bringup_dir, "worlds", "warehouse.sdf"),
+        default_value=os.path.join(bringup_dir, "worlds", "sim_house.sdf.xacro"),
         description="Full path to world model file to load",
     )
 
@@ -74,7 +74,7 @@ def generate_launch_description():
         description="Full path to robot sdf file to spawn the robot in gazebo",
     )
 
-    turtlebot_model_os_value = os.getenv("TURTLEBOT_MODEL", "4")
+    turtlebot_model_os_value = os.getenv("TURTLEBOT_MODEL", "3")
 
     if turtlebot_model_os_value == "3":
         gz_bridge_config = os.path.join(
@@ -123,7 +123,7 @@ def generate_launch_description():
     # running in headless mode. But currently, the Gazebo command line doesn't
     # take SDF strings for worlds, so the output of xacro needs to be saved into
     # a temporary file and passed to Gazebo.
-    world_sdf = tempfile
+    world_sdf = tempfile.mktemp(prefix="tb_", suffix=".sdf")
     world_sdf_xacro = ExecuteProcess(cmd=["xacro", "-o", world_sdf, world])
     gazebo = ExecuteProcess(
         cmd=["gz", "sim", "-r", world_sdf],

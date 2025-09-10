@@ -60,7 +60,7 @@ def generate_launch_description():
 
     declare_world_cmd = DeclareLaunchArgument(
         "world",
-        default_value=os.path.join(bringup_dir, "worlds", "sim_house.sdf.xacro"),
+        default_value=os.path.join(bringup_dir, "worlds", "warehouse.sdf"),
         description="Full path to world model file to load",
     )
 
@@ -74,7 +74,7 @@ def generate_launch_description():
         description="Full path to robot sdf file to spawn the robot in gazebo",
     )
 
-    turtlebot_model_os_value = os.getenv("TURTLEBOT_MODEL", "3")
+    turtlebot_model_os_value = os.getenv("TURTLEBOT_MODEL", "4")
 
     if turtlebot_model_os_value == "3":
         gz_bridge_config = os.path.join(

@@ -123,7 +123,7 @@ def generate_launch_description():
     # running in headless mode. But currently, the Gazebo command line doesn't
     # take SDF strings for worlds, so the output of xacro needs to be saved into
     # a temporary file and passed to Gazebo.
-    world_sdf = tempfile.mktemp(prefix="tb_", suffix=".sdf")
+    world_sdf = tempfile
     world_sdf_xacro = ExecuteProcess(cmd=["xacro", "-o", world_sdf, world])
     gazebo = ExecuteProcess(
         cmd=["gz", "sim", "-r", world_sdf],

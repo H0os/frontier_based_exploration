@@ -45,8 +45,8 @@ COPY mapper_params_online_sync.yaml /opt/ros/jazzy/share/slam_toolbox/config/map
 # Create Colcon workspace with external dependencies
 RUN mkdir -p /frontier_exploration_ws/src
 WORKDIR /frontier_exploration_ws/src
-# COPY dependencies.repos .
-# RUN vcs import < dependencies.repos
+COPY dependencies.repos .
+RUN vcs import < dependencies.repos
 
 # Build the base Colcon workspace, installing dependencies first.
 WORKDIR /frontier_exploration_ws

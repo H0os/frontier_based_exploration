@@ -461,5 +461,12 @@
       <name>Person 2 - Walking</name>
       <pose>-12 15 0 0 0 0</pose>
     </include>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>0.992328 -4.52052 10.8021 0 1.06764 1.5682</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
   </world>
 </sdf>

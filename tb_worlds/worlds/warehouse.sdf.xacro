@@ -44,7 +44,7 @@
     </physics>
     <scene>
       <ambient>0.8 0.8 0.8 1</ambient>
-      <background>0.7 0.7 0.7 1</background>
+      <background>1 1 1 1</background>
       <shadows>0</shadows>
     </scene>
     <wind />
@@ -260,7 +260,7 @@
     </state>
     <gui fullscreen="0">
       <camera name="user_camera">
-        <pose>0.992328 -4.52052 10.8021 0 1.06764 1.5682</pose>
+        <pose>-15.806 -11.922 14.996 0 0.615480 0.785398</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -461,12 +461,5 @@
       <name>Person 2 - Walking</name>
       <pose>-12 15 0 0 0 0</pose>
     </include>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose>0.992328 -4.52052 10.8021 0 1.06764 1.5682</pose>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
-      </camera>
-    </gui>
   </world>
 </sdf>

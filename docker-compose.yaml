@@ -14,7 +14,7 @@
 services:
   # Base image containing dependencies.
   base:
-    image: frontier_exploration:base
+    image: turtlebot_behavior:base
     build:
       context: .
       dockerfile: docker/Dockerfile
@@ -35,33 +35,27 @@ services:
       # Allows graphical programs in the container.
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
-      - XAUTHORITY=/root/.Xauthority
       - NVIDIA_DRIVER_CAPABILITIES=all
-      - CYCLONEDDS_URI=file:///overlay_ws/cyclonedds_config.xml
     volumes:
       # Allows graphical programs in the container.
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - ${XAUTHORITY:-$HOME/.Xauthority}:/root/.Xauthority
-    devices:
-      - /dev/dri:/dev/dri
-    group_add:
-      - video
 
   # Overlay image containing the example source code.
   overlay:
     extends: base
-    image: frontier_exploration:overlay
+    image: turtlebot_behavior:overlay
     build:
       context: .
       dockerfile: docker/Dockerfile
       target: overlay
 
   # Demo simulation world
-   demo-world:
+  demo-world:
     extends: overlay
     command: ros2 launch tb_worlds tb_demo_world.launch.py
-
   # Behavior demo using Python and py_trees
+  
   demo-frontier-detector-grid:
     extends: overlay
     command: ros2 run frontier_exploration map_utils --find_frontiers

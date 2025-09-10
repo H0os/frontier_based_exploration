@@ -77,6 +77,7 @@ RUN mkdir -p /overlay_ws/src
 COPY cyclonedds_config.xml /overlay_ws/cyclonedds_config.xml
 #ENV CYCLONEDDS_URI=file:///overlay_ws/cyclonedds_config.xml
 WORKDIR /overlay_ws
+COPY ./tb_worlds/ ./src/tb_worlds/
 COPY ./frontier_exploration/ ./src/frontier_exploration/
 RUN source /frontier_exploration_ws/install/setup.bash \
  && rosdep install --from-paths src --ignore-src --rosdistro ${ROS_DISTRO} -y \

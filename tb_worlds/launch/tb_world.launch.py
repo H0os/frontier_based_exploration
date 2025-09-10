@@ -70,11 +70,11 @@ def generate_launch_description():
 
     declare_robot_sdf_cmd = DeclareLaunchArgument(
         "robot_sdf",
-        default_value=os.path.join(bringup_dir, "urdf", "gz_waffle.sdf.xacro"),
+        default_value=os.path.join(bringup_dir, "urdf", "gz_waffle.sdf"),
         description="Full path to robot sdf file to spawn the robot in gazebo",
     )
 
-    turtlebot_model_os_value = os.getenv("TURTLEBOT_MODEL", "3")
+    turtlebot_model_os_value = os.getenv("TURTLEBOT_MODEL", "4")
 
     if turtlebot_model_os_value == "3":
         gz_bridge_config = os.path.join(

@@ -6,6 +6,7 @@ ARG ROS_DISTRO=jazzy
 #######################################
 FROM ros:${ROS_DISTRO} AS base
 ENV ROS_DISTRO=${ROS_DISTRO}
+ENV COLCON_PYTHON_EXECUTABLE=/usr/bin/python3update
 SHELL ["/bin/bash", "-c"]
 
 # Install basic apt packages

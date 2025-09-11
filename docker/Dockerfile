@@ -69,12 +69,11 @@ COPY dependencies.repos .
 RUN vcs import < dependencies.repos
 
 # Build the base Colcon workspace, installing dependencies first.
-ENV COLCON_PYTHON_EXECUTABLE=/usr/bin/python3 
 WORKDIR /frontier_exploration_ws
 RUN source /opt/ros/${ROS_DISTRO}/setup.bash \
  && apt-get update -y \
  && rosdep install --from-paths src --ignore-src --rosdistro ${ROS_DISTRO} -y \
- && colcon build --symlink-install
+ && COLCON_PYTHON_EXECUTABLE=/usr/bin/python3 colcon build --symlink-install
 ENV TURTLEBOT_MODEL=4
 
 # Remove display warnings
@@ -102,8 +101,7 @@ COPY ./tb_worlds/ ./src/tb_worlds/
 COPY ./frontier_exploration/ ./src/frontier_exploration/
 RUN source /frontier_exploration_ws/install/setup.bash \
  && rosdep install --from-paths src --ignore-src --rosdistro ${ROS_DISTRO} -y \
- && colcon build --symlink-install
-
+ && COLCON_PYTHON_EXECUTABLE=/usr/bin/python3 colcon build --symlink-install
 # Set up the entrypoint
 COPY ./docker/entrypoint.sh /
 ENTRYPOINT [ "/entrypoint.sh" ]

@@ -137,6 +137,10 @@ RUN groupadd --gid $GID $USERNAME \
 # Set the ownership of the overlay workspace to the new user
 RUN chown -R ${UID}:${GID} /overlay_ws/
 
+ENV VIRTUAL_ENV=/opt/venv
+ENV PATH="${VIRTUAL_ENV}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+
 # Set up the entrypoint, including it in the .bashrc for interactive shells
 USER ${USERNAME}
 RUN echo "source /entrypoint.sh" >> /home/${USERNAME}/.bashrc

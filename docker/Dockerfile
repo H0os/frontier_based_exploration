@@ -21,7 +21,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install additional Python modules
 RUN pip3 install --break-system-packages matplotlib transforms3d
 
-RUN pip3 install --break-system-packages ultralytics 
+ENV VENV=/opt/venv
+RUN python3 -m venv $VENV
+ENV PATH="$VENV/bin:$PATH"
+
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+
+# CPU-only torch/vision:
+RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+RUN pip install --no-cache-dir ultralytics
 
 # Use Cyclone DDS as middleware
 RUN apt-get update && apt-get install -y --no-install-recommends \

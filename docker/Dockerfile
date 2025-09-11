@@ -85,6 +85,7 @@ ENV NO_AT_BRIDGE 1
 # Set up the entrypoint
 WORKDIR /frontier_exploration_ws
 COPY ./docker/entrypoint.sh /
+RUN sed -i 's/\r$//' /entrypoint.sh && chmod +x /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
 
 ##########################################

@@ -6,7 +6,6 @@ ARG ROS_DISTRO=jazzy
 #######################################
 FROM ros:${ROS_DISTRO} AS base
 ENV ROS_DISTRO=${ROS_DISTRO}
-ENV COLCON_PYTHON_EXECUTABLE=/usr/bin/python3update
 SHELL ["/bin/bash", "-c"]
 
 # Install basic apt packages
@@ -74,6 +73,7 @@ WORKDIR /frontier_exploration_ws
 RUN source /opt/ros/${ROS_DISTRO}/setup.bash \
  && apt-get update -y \
  && rosdep install --from-paths src --ignore-src --rosdistro ${ROS_DISTRO} -y \
+ENV COLCON_PYTHON_EXECUTABLE=/usr/bin/python3
  && colcon build --symlink-install
 ENV TURTLEBOT_MODEL=4
 

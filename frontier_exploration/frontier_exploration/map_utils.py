@@ -8,9 +8,6 @@ from geometry_msgs.msg import Point
 from std_msgs.msg import Float32MultiArray, Bool
 import numpy as np
 import argparse
-import torch
-from PIL import Image
-from torchvision import transforms
 from ultralytics import YOLO
 import cv2
 from tf_transformations import euler_from_quaternion, quaternion_matrix, quaternion_from_euler

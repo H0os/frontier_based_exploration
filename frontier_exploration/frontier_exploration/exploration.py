@@ -13,8 +13,6 @@ import numpy as np
 from collections import deque
 import math, random
 import time
-import os
-
 
 class FrontierExploration(Node):
     def __init__(self):

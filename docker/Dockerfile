@@ -21,18 +21,28 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install additional Python modules
 RUN pip3 install --break-system-packages matplotlib transforms3d
 
-RUN apt-get install python3.12-venv
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3-venv ffmpeg libgl1 \
+ && rm -rf /var/lib/apt/lists/*
+
+# Create and use an isolated venv
 ENV VENV=/opt/venv
 RUN python3 -m venv $VENV
 ENV PATH="$VENV/bin:$PATH"
 
+# Keep pip tooling current
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+
+# --- Choose ONE torch build (CPU or CUDA). Comment out the other. ---
 
 # CPU-only torch/vision:
 RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
-RUN pip install --no-cache-dir ultralytics
+# CUDA 12.1 torch/vision (matches the nvidia-* cu12 wheels ultralytics likes):
+#RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cu121
 
+# Your Python deps
+RUN pip install --no-cache-dir matplotlib transforms3d ultralytics
 # Use Cyclone DDS as middleware
 RUN apt-get update && apt-get install -y --no-install-recommends \
  ros-${ROS_DISTRO}-rmw-cyclonedds-cpp

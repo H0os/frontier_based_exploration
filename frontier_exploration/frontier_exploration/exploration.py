@@ -31,9 +31,9 @@ class FrontierExploration(Node):
         self.previous_map = None
 
         # Declare ROS2 Parameters for weights
-        self.declare_parameter('weight_w1', 1.0)
-        self.declare_parameter('weight_w2', 0.5)
-        self.declare_parameter('weight_w3', 1.0)
+        self.declare_parameter('weight_w1', 9.65043)
+        self.declare_parameter('weight_w2', 5.92627)
+        self.declare_parameter('weight_w3', 8.79552)
         self.w1 = self.get_parameter('weight_w1').value
         self.w2 = self.get_parameter('weight_w2').value
         self.w3 = self.get_parameter('weight_w3').value

@@ -39,8 +39,7 @@ class MapUtils(Node):
 
         # If you're using a trained model
         if self.learned_find_frontiers_flag:
-            self.model = YOLO("/home/aymon/frontier_exploration_ws/frontier_exploration/"
-                              "frontier_exploration/best.pt")
+            self.model = YOLO("/overlay_ws/src/frontier_exploration/frontier_exploration/best.pt")
             self.model.cpu()
 
         # Subscribe to the 'map' topic which publishes OccupancyGrid messages

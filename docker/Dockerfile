@@ -11,15 +11,17 @@ SHELL ["/bin/bash", "-c"]
 # Install basic apt packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
  curl git libcanberra-gtk-module libcanberra-gtk3-module fuse3 libfuse2 libqt5svg5-dev \
- python3-pip python3-opencv python3-tk python3-pyqt5.qtwebengine
+ python3-pip python3-opencv python3-tk python3-pyqt5.qtwebengine \
+ ros-${ROS_DISTRO}-tf-transformations
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-${ROS_DISTRO}-turtlebot4-simulator \
     mesa-utils libgl1-mesa-dri xauth x11-apps \
     && (apt-get install -y libgl1-mesa-glx || apt-get install -y libgl1 libglx-mesa0) \
     && rm -rf /var/lib/apt/lists/*
+
 # Install additional Python modules
-RUN pip3 install --break-system-packages matplotlib transforms3d
+#RUN pip3 install --break-system-packages matplotlib transforms3d
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-venv ffmpeg libgl1 \
@@ -42,7 +44,7 @@ RUN pip install --no-cache-dir torch torchvision --index-url https://download.py
 #RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cu121
 
 # Your Python deps
-RUN pip install --no-cache-dir matplotlib transforms3d ultralytics
+RUN pip install --no-cache-dir matplotlib transforms3d ultralytics scikit-learn
 # Use Cyclone DDS as middleware
 RUN apt-get update && apt-get install -y --no-install-recommends \
  ros-${ROS_DISTRO}-rmw-cyclonedds-cpp
@@ -85,7 +87,6 @@ ENV NO_AT_BRIDGE 1
 # Set up the entrypoint
 WORKDIR /frontier_exploration_ws
 COPY ./docker/entrypoint.sh /
-RUN sed -i 's/\r$//' /entrypoint.sh && chmod +x /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
 
 ##########################################

@@ -1,16 +1,5 @@
 #!/bin/bash
 # Basic entrypoint for ROS Docker containers
-# docker/entrypoint.sh  (add near the top, before running ros2)
-set -e
-source /opt/ros/${ROS_DISTRO}/setup.bash
-source /frontier_exploration_ws/install/setup.bash || true
-source /overlay_ws/install/setup.bash || true
-
-# NEW: ensure CLI scripts and python use the venv
-source /opt/venv/bin/activate
-echo "Activated venv: $(python3 -V)"
-
-exec "$@"
 
 # Source ROS 2
 source /opt/ros/${ROS_DISTRO}/setup.bash
@@ -27,6 +16,17 @@ fi
 if [ -f /overlay_ws/install/setup.bash ]
 then
   source /overlay_ws/install/setup.bash
+# --- Ensure Ultralytics (installed in /opt/venv) is importable even if scripts use /usr/bin/python3 ---
+VENV_DIR="/opt/venv"
+if [ -x "${VENV_DIR}/bin/python3" ]; then
+  VENV_PYVER="$(${VENV_DIR}/bin/python3 -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')"
+  export PYTHONPATH="${VENV_DIR}/lib/python${VENV_PYVER}/site-packages:${PYTHONPATH:-}"
+  export PATH="${VENV_DIR}/bin:${PATH}"
+  echo "Using venv site-packages: ${VENV_DIR}/lib/python${VENV_PYVER}/site-packages"
+  echo "Runtime python: $(which python3)"
+fi
+# -----------------------------------------------------------------------------------------------
+
   echo "Sourced overlay workspace"
 fi
 

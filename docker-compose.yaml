@@ -67,4 +67,13 @@ services:
   demo-explore:
     extends: overlay
     command: ros2 run frontier_exploration exploration 
+
+  demo-frontier-detector-performance:
+    extends: overlay
+    command: eog graph_performance_metrics.png
+  
+  demo-frontier-detector-visualizer:
+    extends: overlay
+    command: eog result.jpg
+  
   

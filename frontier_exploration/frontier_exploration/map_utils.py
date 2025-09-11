@@ -122,7 +122,7 @@ class MapUtils(Node):
             #remove_searched_nodes_bfs(self.root)
     
             # Visualize
-            visualize_tree_on_map(grid_data, self.root, "my_tree_overlay.png")
+            visualize_tree_on_map(grid_data, self.root, "result.jpg")
 
 
             # For "cells evaluated," we assume the entire grid is relevant:

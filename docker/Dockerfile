@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install additional Python modules
 RUN pip3 install --break-system-packages matplotlib transforms3d
 
-RUN apt install python3.12-venv
+RUN apt-get install python3.12-venv
 ENV VENV=/opt/venv
 RUN python3 -m venv $VENV
 ENV PATH="$VENV/bin:$PATH"

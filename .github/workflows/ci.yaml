@@ -49,9 +49,17 @@ jobs:
           docker run --rm frontier-image bash -lc '
             set -e
             if command -v ros2 >/dev/null 2>&1; then
-              ros2 --version || true
-              ros2 pkg list | head -n 5 || true
-            elif command -v python3 >/dev/null 2>&1; then
-              python3 --version || true
+              echo "ROS 2 detected:"
+              # ros2 has no --version; print the first help line instead
+              ros2 --help 2>/dev/null | sed -n "1,2p" || true
+
+              echo "Sample of installed packages:"
+              # Avoid BrokenPipe by not using head; sed prints first N lines safely
+              ros2 pkg list 2>/dev/null | sed -n "1,10p" || true
+
+              echo "Check for expected sim pkgs (optional):"
+              ros2 pkg list 2>/dev/null | grep -E "turtlebot4|create_node|turtlebot4_gz_bringup" || true
+            else
+              echo "ROS 2 not found; Python version:" && python3 --version || true
             fi
           ' || true

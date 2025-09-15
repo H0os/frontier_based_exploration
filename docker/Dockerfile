@@ -44,7 +44,6 @@ RUN pip install --no-cache-dir torch torchvision --index-url https://download.py
 # CUDA 12.1 torch/vision (matches the nvidia-* cu12 wheels ultralytics likes):
 #RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cu121
 
-# Your Python deps
 RUN pip install --no-cache-dir matplotlib transforms3d ultralytics scikit-learn
 # Use Cyclone DDS as middleware
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -56,14 +55,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null \
  apt-get update \
  apt-get install gz-harmonic
-
-COPY control.yaml /opt/ros/jazzy/share/irobot_create_control/config/control.yaml
-COPY mapper_params_lifelong.yaml /opt/ros/jazzy/share/slam_toolbox/config/mapper_params_lifelong.yaml
-COPY mapper_params_localization.yaml /opt/ros/jazzy/share/slam_toolbox/config/mapper_params_localization.yaml
-COPY mapper_params_offline.yaml /opt/ros/jazzy/share/slam_toolbox/config/mapper_params_offline.yaml
-COPY mapper_params_online_async.yaml /opt/ros/jazzy/share/slam_toolbox/config/mapper_params_online_async.yaml
-COPY mapper_params_online_sync.yaml /opt/ros/jazzy/share/slam_toolbox/config/mapper_params_online_sync.yaml
-
 
 # Create Colcon workspace with external dependencies
 RUN mkdir -p /frontier_exploration_ws/src

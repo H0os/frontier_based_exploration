@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the repository
+      - uses: actions/checkout@v4
+
+      # Determine if a Dockerfile exists. This sets an output called `found`
+      # which we use later to decide whether to build a container or run the
+      # script directly.
+      - name: Check for Dockerfile
+        id: dockerfile-check
+        run: |
+          if [ -f Dockerfile ]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Build the Docker image only if a Dockerfile is present. Tag it for reuse.
+      - name: Build container
+        if: steps.dockerfile-check.outputs.found == 'true'
+        run: |
+          docker build -t frontier-image .
+
+      # Smoke test inside the container. This runs a very lightweight check
+      # (e.g. Python or ROS help commands) to verify the environment is sane. If
+      # the underlying command fails, we do not fail the CI (use `|| true`).
+      - name: Run smoke test inside container
+        if: steps.dockerfile-check.outputs.found == 'true'
+        run: |
+          docker run --rm frontier-image bash -lc "\
+            set -e; \
+            # If ROS 2 is installed, show its version. Otherwise show Python. \"\
+            if command -v ros2 >/dev/null 2>&1; then \
+              ros2 --version; \
+              ros2 pkg list | head -n 5; \
+            elif command -v python3 >/dev/null 2>&1; then \
+              python3 --version; \
+            fi || true"

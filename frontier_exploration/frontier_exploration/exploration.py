@@ -31,9 +31,9 @@ class FrontierExploration(Node):
         self.previous_map = None
 
         # Declare ROS2 Parameters for weights
-        self.declare_parameter('weight_w1', 9.65043)
+        self.declare_parameter('weight_w1', 100)
         self.declare_parameter('weight_w2', 5.92627)
-        self.declare_parameter('weight_w3', 8.79552)
+        self.declare_parameter('weight_w3', 0.7)
         self.w1 = self.get_parameter('weight_w1').value
         self.w2 = self.get_parameter('weight_w2').value
         self.w3 = self.get_parameter('weight_w3').value
@@ -172,7 +172,7 @@ class FrontierExploration(Node):
         frontiers = self.centroids
         if not frontiers:
             self.get_logger().info("No frontiers found. Exploration is complete.")
-            #self.navigate_to_random_spot()
+            self.navigate_to_random_spot()
             return
 
         # Choose the closest frontier
@@ -182,6 +182,7 @@ class FrontierExploration(Node):
             self.navigate_to_goal(closest_frontier)
         else:
             self.get_logger().info("No valid frontier could be selected.")
+            self.navigate_to_random_spot(radius=3)
 
     def find_closest_frontier(self, frontiers):
         """Find the closest frontier to the robot."""    
@@ -209,7 +210,7 @@ class FrontierExploration(Node):
             angular_difference = min(angular_difference, 2 * math.pi - angular_difference)
 
             cost = self.w1 * distance + self.w2 * angular_difference - self.w3 * frontier[2]
-            if cost < min_cost:
+            if (cost < min_cost) and (distance > 0.3):
                 min_cost = cost
                 closest_frontier = frontier
         

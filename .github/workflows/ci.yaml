@@ -7,40 +7,51 @@ on:
 jobs:
   smoke:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      # Check out the repository
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      # Determine if a Dockerfile exists. This sets an output called `found`
-      # which we use later to decide whether to build a container or run the
-      # script directly.
-      - name: Check for Dockerfile
-        id: dockerfile-check
+      # Locate a Dockerfile anywhere (root or subfolder). Exposes:
+      #   steps.dockerfile.outputs.found == 'true' | 'false'
+      #   steps.dockerfile.outputs.path  -> path to Dockerfile
+      - name: Locate Dockerfile
+        id: dockerfile
+        shell: bash
         run: |
-          if [ -f Dockerfile ]; then
+          set -e
+          DF="$(git ls-files | grep -Ei '(^|/)Dockerfile$' | head -n1 || true)"
+          if [[ -n "$DF" ]]; then
             echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "path=$DF"  >> "$GITHUB_OUTPUT"
+            echo "Found Dockerfile at: $DF"
           else
             echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "No Dockerfile found"
           fi
 
-      # Build the Docker image only if a Dockerfile is present. Tag it for reuse.
-      - name: Build container
-        if: steps.dockerfile-check.outputs.found == 'true'
+      # (Optional) quick visibility while you’re tuning paths
+      - name: Debug workspace
         run: |
-          docker build -t frontier-image .
+          pwd && ls -la
+          find . -maxdepth 3 -name 'Dockerfile' -print || true
 
-      # Smoke test inside the container. This runs a very lightweight check
-      # (e.g. Python or ROS help commands) to verify the environment is sane. If
-      # the underlying command fails, we do not fail the CI (use `|| true`).
-      - name: Run smoke test inside container
-        if: steps.dockerfile-check.outputs.found == 'true'
+      # Build the Docker image if a Dockerfile exists
+      - name: Build container
+        if: steps.dockerfile.outputs.found == 'true'
         run: |
-          docker run --rm frontier-image bash -lc "\
-            set -e; \
-            # If ROS 2 is installed, show its version. Otherwise show Python. \"\
-            if command -v ros2 >/dev/null 2>&1; then \
-              ros2 --version; \
-              ros2 pkg list | head -n 5; \
-            elif command -v python3 >/dev/null 2>&1; then \
-              python3 --version; \
-            fi || true"
+          docker build -t frontier-image -f "${{ steps.dockerfile.outputs.path }}" .
+
+      # Lightweight smoke test inside the container. We don't fail the job on errors.
+      - name: Run smoke test inside container
+        if: steps.dockerfile.outputs.found == 'true'
+        run: |
+          docker run --rm frontier-image bash -lc '
+            set -e
+            if command -v ros2 >/dev/null 2>&1; then
+              ros2 --version || true
+              ros2 pkg list | head -n 5 || true
+            elif command -v python3 >/dev/null 2>&1; then
+              python3 --version || true
+            fi
+          ' || true

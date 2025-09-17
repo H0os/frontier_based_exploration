@@ -109,3 +109,14 @@ To close the simulation use:
 ```
 docker compose down
 ```
+
+### Bayesian Optimisation Demo
+
+To run the Bayesian Optimisation demo use:
+```
+docker compose up demo-bayesian-optimisation
+```
+This will run a module that handles opening all relevant nodes and starts a 3 minute run. The current configs for BO:
+- parameter space for weights is between 0 and 10
+- we do 20 runs 
+- with 5 random starts before approximating

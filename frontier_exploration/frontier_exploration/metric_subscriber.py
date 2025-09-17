@@ -42,25 +42,40 @@ def evaluate_exploration_performance():
 
 def objective(weights):
     w1, w2, w3 = weights
+    print(f"Trying weights: w1={w1}, w2={w2}, w3={w3}")
+
     map = ["warehouse", "maze", "depot"]
     # Launch exploration node with the current weights
     try:
         process_map = subprocess.Popen([
-            'ros2', 'launch', 'turtlebot4_gz_bringup', 'turtlebot4_gz.launch.py',
-            'slam:=true', 'nav2:=true', 'rviz:=true', f'world:={map[random.randint(0,2)]}'
-        ], preexec_fn=os.setsid )
+            'ros2', 'launch', 'tb_worlds', 'tb_demo_world.launch.py'
+        ], preexec_fn=os.setsid, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL )
+        
         process_explore = subprocess.Popen([
-            'ros2', 'launch', 'frontier_exploration', 'exploration.launch.py',
+            'ros2', 'run', 'frontier_exploration', 'exploration',
             f'weight_w1:={w1}', f'weight_w2:={w2}', f'weight_w3:={w3}'
         ], preexec_fn=os.setsid )
+        
+        process_detector = subprocess.Popen([
+            'ros2', 'run', 'frontier_exploration', 'map_utils',
+            '--find_frontiers'
+        ], preexec_fn=os.setsid, stdout=subprocess.DEVNULL )
 
-        time.sleep(60*3)  # Run exploration for 60 seconds
+        time.sleep(60*3)  # Run exploration 
     #process_explore.terminate()
     #process_map.terminate()
     finally:
-        os.killpg(os.getpgid(process_map.pid), signal.SIGINT)
+        # os.killpg(os.getpgid(process_explore.pid), signal.SIGTERM)
+        # process_explore.wait()
+        # os.killpg(os.getpgid(process_detector.pid), signal.SIGTERM)
+        # process_detector.wait()
+        process_explore.terminate()
+        process_detector.terminate()
+        os.killpg(os.getpgid(process_map.pid), signal.SIGTERM)
         process_map.wait()
-        process_explore.send_signal(signal.SIGINT)
+        
+        #process_detector.send_signal(signal.SIGINT)
+
         #process_explore.wait()
     
 
@@ -75,7 +90,7 @@ space = [
 ]
 
 # Perform Bayesian Optimization
-res = gp_minimize(objective, space, n_calls=100, n_random_starts=10, random_state=0)
+res = gp_minimize(objective, space, n_calls=20, n_random_starts=5, random_state=0)
 
 # Print the results
 print(f"Best weights: w1={res.x[0]}, w2={res.x[1]}, w3={res.x[2]}")

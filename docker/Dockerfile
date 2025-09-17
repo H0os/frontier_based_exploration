@@ -36,15 +36,12 @@ ENV PATH="$VENV/bin:$PATH"
 # Keep pip tooling current
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
-# --- Choose ONE torch build (CPU or CUDA). Comment out the other. ---
-
 # CPU-only torch/vision:
 RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
 # CUDA 12.1 torch/vision (matches the nvidia-* cu12 wheels ultralytics likes):
-#RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cu121
 
-RUN pip install --no-cache-dir matplotlib transforms3d ultralytics scikit-learn
+RUN pip install --no-cache-dir matplotlib transforms3d ultralytics scikit-learn scikit-optimize
 # Use Cyclone DDS as middleware
 RUN apt-get update && apt-get install -y --no-install-recommends \
  ros-${ROS_DISTRO}-rmw-cyclonedds-cpp

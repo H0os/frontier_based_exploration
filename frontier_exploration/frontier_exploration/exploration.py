@@ -280,7 +280,7 @@ class FrontierExploration(Node):
         
         x, y, yaw = robot_position
         random_angle = random.uniform(0, 2 * 3.14159)
-        random_distance = random.uniform(0.1, radius)
+        random_distance = random.uniform(1, radius)
         
         new_x = x + random_distance * math.cos(random_angle)
         new_y = y + random_distance * math.sin(random_angle)
